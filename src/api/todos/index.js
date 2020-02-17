@@ -5,12 +5,12 @@ const todossCtrl = require("./todos.controller");
 
 todos.get("/", todossCtrl.list);
 
+todos.get("/:id", todossCtrl.get);
+
 todos.post("/", todossCtrl.create);
 
-todos.delete("/", todossCtrl.delete);
+todos.delete("/:id", todossCtrl.delete);
 
-todos.put("/", todossCtrl.replace);
-
-todos.patch("/", todossCtrl.update);
+todos.patch("/:id", todossCtrl.update);
 
 module.exports = todos;
